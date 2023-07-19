@@ -27,12 +27,7 @@ const JourneyonboardingIntroductionHonorOfModal = (props) => {
                   Design your journey cover
                 </Text>
               </div>
-              <Img
-                className="common-pointer h-6 w-6"
-                src="images/img_close.svg"
-                alt="close"
-                onClick={props.onRequestClose}
-              />
+              <Img className="h-6 w-6" src="images/img_close.svg" alt="close" />
             </div>
             <div className="flex flex-col font-circularxx items-center justify-start mr-[69px] mt-[27px] pt-0.5 w-[91%] md:w-full">
               <div className="flex flex-col items-center justify-start w-full">
@@ -110,7 +105,7 @@ const JourneyonboardingIntroductionHonorOfModal = (props) => {
             </div>
             <Button
               className="common-pointer bg-blue-900 cursor-pointer font-circularstd font-medium leading-[normal] md:ml-[0] ml-[254px] mr-[323px] mt-10 py-[9px] rounded-lg text-base text-center text-white-A700 w-[132px]"
-              onClick={() => navigate("/")}
+              onClick={() => navigate("/journeycompletedonboarding")}
             >
               Next
             </Button>
