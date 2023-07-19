@@ -1,7 +1,5 @@
 import React from "react";
 
-import { useNavigate } from "react-router-dom";
-
 import JourneyonboardingIntroductionHonorOfModal from "modals/JourneyonboardingIntroductionHonorOf";
 
 import { Button, Img, Input, Line, Text } from "components";
@@ -9,7 +7,6 @@ import { Button, Img, Input, Line, Text } from "components";
 import { CloseSVG } from "../../assets/images";
 
 const JourneyonboardingbeginPage: React.FC = () => {
-  const navigate = useNavigate();
   const [
     isOpenJourneyonboardingIntroductionHonorOfModal,
     setJourneyonboardingIntroductionHonorOfModal,
@@ -145,10 +142,7 @@ const JourneyonboardingbeginPage: React.FC = () => {
               />
             </div>
           </div>
-          <div
-            className="common-pointer flex flex-col items-center justify-start p-[13px] md:px-5 w-[53%] md:w-full"
-            onClick={handleOpenJourneyonboardingIntroductionHonorOfModal}
-          >
+          <div className="flex flex-col items-center justify-start p-[13px] md:px-5 w-[53%] md:w-full">
             <Text
               className="text-2xl md:text-[22px] text-center text-gray-900_01 sm:text-xl"
               size="txtSanchezRegular24"
@@ -176,7 +170,7 @@ const JourneyonboardingbeginPage: React.FC = () => {
             </Text>
             <Button
               className="common-pointer bg-blue-900 cursor-pointer font-circularstd font-medium leading-[normal] mb-[27px] mt-[81px] py-[9px] rounded-lg text-base text-center text-white-A700 w-[132px]"
-              onClick={() => navigate("/journeyonboardingintroductionhonorof")}
+              onClick={handleOpenJourneyonboardingIntroductionHonorOfModal}
             >
               Begin
             </Button>
