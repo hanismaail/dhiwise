@@ -110,7 +110,7 @@ const JourneyonboardingIntroductionHonorOfModal = (props) => {
             </div>
             <Button
               className="common-pointer bg-blue-900 cursor-pointer font-circularstd font-medium leading-[normal] md:ml-[0] ml-[254px] mr-[323px] mt-10 py-[9px] rounded-lg text-base text-center text-white-A700 w-[132px]"
-              onClick={() => navigate("/journeyonboardingselectsparks")}
+              onClick={() => navigate("/")}
             >
               Next
             </Button>
