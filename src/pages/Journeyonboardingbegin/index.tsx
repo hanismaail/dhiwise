@@ -2,14 +2,27 @@ import React from "react";
 
 import { useNavigate } from "react-router-dom";
 
+import JourneyonboardingIntroductionHonorOfModal from "modals/JourneyonboardingIntroductionHonorOf";
+
 import { Button, Img, Input, Line, Text } from "components";
 
 import { CloseSVG } from "../../assets/images";
 
 const JourneyonboardingbeginPage: React.FC = () => {
   const navigate = useNavigate();
+  const [
+    isOpenJourneyonboardingIntroductionHonorOfModal,
+    setJourneyonboardingIntroductionHonorOfModal,
+  ] = React.useState(false);
 
   const [searchvalue, setSearchvalue] = React.useState<string>("");
+
+  function handleOpenJourneyonboardingIntroductionHonorOfModal() {
+    setJourneyonboardingIntroductionHonorOfModal(true);
+  }
+  function handleCloseJourneyonboardingIntroductionHonorOfModal() {
+    setJourneyonboardingIntroductionHonorOfModal(false);
+  }
 
   return (
     <>
@@ -132,7 +145,10 @@ const JourneyonboardingbeginPage: React.FC = () => {
               />
             </div>
           </div>
-          <div className="flex flex-col items-center justify-start p-[13px] md:px-5 w-[53%] md:w-full">
+          <div
+            className="common-pointer flex flex-col items-center justify-start p-[13px] md:px-5 w-[53%] md:w-full"
+            onClick={handleOpenJourneyonboardingIntroductionHonorOfModal}
+          >
             <Text
               className="text-2xl md:text-[22px] text-center text-gray-900_01 sm:text-xl"
               size="txtSanchezRegular24"
@@ -215,6 +231,12 @@ const JourneyonboardingbeginPage: React.FC = () => {
           </div>
         </div>
       </div>
+      {isOpenJourneyonboardingIntroductionHonorOfModal ? (
+        <JourneyonboardingIntroductionHonorOfModal
+          isOpen={isOpenJourneyonboardingIntroductionHonorOfModal}
+          onRequestClose={handleCloseJourneyonboardingIntroductionHonorOfModal}
+        />
+      ) : null}
     </>
   );
 };
